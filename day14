@@ -1,0 +1,17 @@
+// template
+#include<iostream>
+using namespace std;
+template<class t>
+void swapp(t&x,t&y){
+        t temp;
+    temp = x;
+    x = y;
+    y = temp;
+}
+int main(){
+    int x,y;
+    cin>>x>>y;
+    cout<<x<<" "<<y<<endl;
+    swap(x,y);
+        cout<<x<<" "<<y<<endl;
+}
