@@ -1,0 +1,76 @@
+#include<iostream>
+using namespace std;
+int stack[100], n=100, top=-1;
+
+void push(int data)
+{
+    if (top>=n-1)
+    cout<<"Stack Overflow"<<endl;
+    else{
+        top++;
+        stack[top]=data;
+    }
+}
+void pop()
+{
+    int temp;
+    if (top<=-1)
+    cout<<"Stack Underflow"<<endl;
+    else{
+        cout<<"The popped element is "<<stack[top]<<endl;
+       temp= top--;
+       
+    }
+}
+void display()
+{
+    if(top>=0){
+        cout<<"The stack elements are:";
+        for(int i=top; i>=0; i--)
+        {
+            cout<<stack[i]<<" ";
+            cout<<endl;
+        }
+    }
+    else
+        cout<<"Stack is empty";
+}
+
+int main()
+{
+    int choice, data;
+    cout<<"Enter 1 to Push "<<endl;
+    cout<<"Enter 2 to Pop "<<endl;
+    cout<<"Enter 3 to Display "<<endl;
+    cout<<"Enter 4 to Exit "<<endl;
+
+    do{
+        cout<<"Enter choice: "<<endl;
+        cin>>choice;
+        switch(choice) {
+         case 1: {
+            cout<<"Enter value to be pushed:"<<endl;
+            cin>>data;
+            push(data);
+            break;
+         }
+         case 2: {
+            pop();
+            break;
+         }
+         case 3: {
+            display();
+            break;
+         }
+         case 4: {
+            cout<<"Exit"<<endl;
+            break;
+         }
+         default: {
+            cout<<"Invalid Choice"<<endl;
+         }
+      }
+    }
+    while(choice!=0);
+    return 0;
+}
