@@ -1,0 +1,23 @@
+// manipulators in c++
+//1. endl
+#include<iostream>
+using namespace std;
+int main(){
+    int a=10;
+    int b=5;
+    cout<<a+b<<endl;  //endl is a manipulator which is used to change the line
+      cout<<a-b<<endl;
+         cout<<a*b<<endl;
+            cout<<a/b<<endl; 
+}
+//2. setw : it is used to calculate field width
+#include<iostream>
+#include<iomanip>  //this header file is used for the setw manipulators
+using namespace std;
+int main(){
+    int a=4,b=67,c=6789;
+    cout<<setw(4)<<a<<endl;
+    cout<<setw(4)<<b<<endl;
+    cout<<setw(4)<<c<<endl;
+    
+}
