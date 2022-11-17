@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+        int n,r;
+        cin>>n>>r;
+        int a[n];
+        int b[n];
+        long long d[n];
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+        }
+        for(int i=0;i<n;i++){
+            cin>>b[i];
+            d[i]=((long)a[i]*(long)b[i]);
+        }
+         while (r--){
+        int l,p;
+        cin>>l>>p;
+        int ele1=l-1;
+        int ele2=p-1;
+        long long sum=0;
+        for (int i=ele1;i<=ele2;i++){
+            sum+=(long long)d[i];
+        }
+        cout<<sum<<endl;
+    }
+}
