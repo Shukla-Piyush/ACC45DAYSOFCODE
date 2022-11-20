@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#include <iostream>
+#include<algorithm>
+#include<cmath>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+   int n,x;
+   cin>>n>>x;
+   
+       int a,b;
+   int s=INT_MIN;
+   for(int i=0;i<n;i++){
+         cin>>a>>b;
+        if(x>=a){
+          s=max(s,b);  
+        }
+   }
+   cout<<s<<endl;
+  }  
+}
