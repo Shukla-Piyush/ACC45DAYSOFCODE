@@ -1,0 +1,25 @@
+class abc{
+          	public:
+    vector<vector<int>>ans;
+    void help(int n,vector<int>&curr,int t){
+        if(t==0){
+            ans.push_back(curr);
+            return;
+        }
+        if(n==0)return;
+        if(t>=n){
+           curr.push_back(n); 
+           help(n,curr,t-n);
+           curr.pop_back();
+        }
+        help(n-1,curr,t);
+    }
+        vector<vector<int>>UniquePartitions(int n){
+            vector<int>curr;
+            help(n,curr,n);
+            return ans;
+        
+    
+       
+    }
+};
