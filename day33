@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+class student{
+    protected:
+    int rllno;
+    public:
+    void setn(int a){
+        rllno=a;
+    }
+    void printn(){
+        cout<<" roll no is"<<rllno<<endl;
+    }
+};
+class test:public virtual student{
+    protected:
+    float maths ,physics;
+    public:
+    void setm(float m,float p){
+        maths=m;
+        physics=p;
+    }
+    void printm(){
+        cout<<"maths :"<<maths<<endl
+        << " physics: "<<physics<<endl;
+    }
+};
+class sports: public virtual student{
+    protected:
+    float score;
+    public:
+    void sets(float s){
+        score=s;
+    }
+    void prints(){
+        cout<<"pt score is"<<score<<endl;
+    }
+};
+class result:public test,public sports{
+    float total;
+    public:
+    void display(){
+        total=maths+physics+score+rllno;
+        printn();
+        printm();
+        prints();
+        cout<<"total score is:"<<total<<endl;
+    }
+};
+
+int main(){
+    result piyush;
+    piyush.setn(400);
+    piyush.setm(56.5,47.6);
+    piyush.sets(9);
+    piyush.display();
+    return 0;
